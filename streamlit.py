@@ -125,9 +125,9 @@ race = st.selectbox("Race", options['race'])
 
 sex = st.selectbox("Sex", options['sex'])
 
-capital_gain = st.number_input("Capital Gain", min_gain, max_gain, default_gain)
+capital_gain = st.slider("Capital Gain", min_gain, max_gain, default_gain)
 
-capital_loss = st.number_input("Capital Loss", min_loss, max_loss, default_loss)
+capital_loss = st.slider("Capital Loss", min_loss, max_loss, default_loss)
 
 hours_per_week = st.number_input("Hours per Week", min_hours, max_hours, default_hours)
 
