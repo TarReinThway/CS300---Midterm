@@ -101,7 +101,7 @@ min_hours, max_hours, default_hours = get_hours_range()
 
 #Side Bar
 logo_path = "Images/pulogo.jpg"
-if os.path.exist(logo_path):
+if os.path.exists(logo_path):
     st.sidebar.image(logo_path, width = 150)
 st.sidebar.markdown("**Name: Tar Rein Thway**")
 st.sidebar.markdown("**ID: PIUS20220022**")
