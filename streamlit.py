@@ -16,9 +16,9 @@ model = load_model()
 
 #Note: I didn't come up with this code. But I've tried to understand.
 def get_options():
-    preprocesser = model.named_steps['preprocesser']
+    preprocessor = model.named_steps['preprocessor']
     #Taking preprocessor column_transformer, from full_pipeline. 
-    cat_transformer = preprocesser.named_transformers_['cat']
+    cat_transformer = preprocessor.named_transformers_['cat']
     #Taking categorical transformer from preprocessor.
     onehot = cat_transformer.named_steps['onehot']
     #Taking onehot encoding step from categorical transformer pipeline. 
@@ -26,7 +26,7 @@ def get_options():
     #Extracting categories. Similar to .unique().
     
     #Doing similar step for education column. 
-    edu_transformer = preprocesser.named_transformers_['education']
+    edu_transformer = preprocessor.named_transformers_['education']
     ordinal = edu_transformer.named_steps['ordinal']
     edu_options = ordinal.categories_[0]
 
