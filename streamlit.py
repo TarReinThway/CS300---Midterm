@@ -5,6 +5,7 @@ import os
 
 #Title
 st.title("Midterm Project")
+st.write("This project is about building a Logistic Regression model, using UCI Adult dataset, to predict whether a person will have more than or less than 50K annual income.")
 
 #Loading Model
 def load_model():
