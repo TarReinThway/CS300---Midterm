@@ -54,7 +54,7 @@ def get_age_range():
     mean_value = scaler.mean_[0]
     std_value = scaler.scale_[0]
     min_value = int(max(17, mean_value - (3 * std_value)))
-    max_value = int(min(100, mean_value - (3 * std_value)))
+    max_value = int(min(100, mean_value + (3 * std_value)))
     default_value = int(mean_value)
     return min_value, max_value, default_value
 
@@ -67,7 +67,7 @@ def get_capital_gain_range():
     mean_value = scaler.mean_[1]
     std_value = scaler.scale_[1]
     min_value = 0
-    max_value = int(min(200000, mean_value - (3 * std_value)))
+    max_value = int(min(200000, mean_value + (3 * std_value)))
     default_value = 0
     return min_value, max_value, default_value
 
@@ -80,7 +80,7 @@ def get_capital_loss_range():
     mean_value = scaler.mean_[2]
     std_value = scaler.scale_[2]
     min_value = 0
-    max_value = int(min(10000, mean_value - (3 * std_value)))
+    max_value = int(min(10000, mean_value + (3 * std_value)))
     default_value = 0
     return min_value, max_value, default_value
 
@@ -93,7 +93,7 @@ def get_hours_range():
     mean_value = scaler.mean_[3]
     std_value = scaler.scale_[3]
     min_value = int(max(1, mean_value - (3 * std_value)))
-    max_value = int(min(100, mean_value - (3 * std_value)))
+    max_value = int(min(100, mean_value + (3 * std_value)))
     default_value = int(mean_value)
     return min_value, max_value, default_value
 
