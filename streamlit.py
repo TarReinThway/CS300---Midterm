@@ -18,7 +18,7 @@ model = load_model()
 def get_options():
     preprocesser = model.named_steps['preprocesser']
     #Taking preprocessor column_transformer, from full_pipeline. 
-    cat_transformer = preprocesser.named_transformer_['cat']
+    cat_transformer = preprocesser.named_transformers_['cat']
     #Taking categorical transformer from preprocessor.
     onehot = cat_transformer.named_steps['onehot']
     #Taking onehot encoding step from categorical transformer pipeline. 
